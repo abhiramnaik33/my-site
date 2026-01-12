@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ALEX CIPHER | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00ddff",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#141b1c",
+                        "border-dark": "#27383a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Space Grotesk', sans-serif;
+                background-color: #0a0a0a;
+            }
+        }
+        .grid-bg {
+            background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                              linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+        }
+        .glitch-text {
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        .custom-glow:hover {
+            box-shadow: 0px 0px 15px rgba(0, 221, 255, 0.3);
+            border-color: #00ddff;
+            transition: all 0.3s ease;
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+<div class="fixed inset-0 grid-bg opacity-30 pointer-events-none z-0"></div>
+<div class="fixed inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark pointer-events-none z-0"></div>
+<nav class="fixed top-0 w-full z-[100] glass-nav border-b border-border-dark/50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-wider uppercase">Cipher</h2>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#about">About</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#skills">Skills</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#projects">Projects</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#experience">Experience</a>
+<a class="text-gray-400 hover:text-primary text-sm font-medium transition-colors" href="#blog">Blog</a>
+<a class="flex min-w-[100px] items-center justify-center rounded border border-primary bg-primary/10 hover:bg-primary text-primary hover:text-background-dark h-10 px-5 text-sm font-bold transition-all duration-300" href="#contact">Hire Me</a>
+</div>
+</div>
+</nav>
+<div class="relative z-10 pt-20">
+<section class="min-h-screen flex items-center px-6 md:px-20 lg:px-40" id="hero">
+<div class="max-w-[1200px] w-full mx-auto grid lg:grid-cols-2 gap-12 items-center py-20">
+<div class="flex flex-col gap-6 items-start">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-mono uppercase tracking-widest">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                        System Protocol: Active
+                    </div>
+<div class="flex flex-col gap-2">
+<h1 class="glitch-text text-white text-6xl md:text-8xl font-black leading-none tracking-tighter uppercase">
+                            ALEX<br/>CIPHER
+                        </h1>
+<h2 class="text-primary text-lg md:text-2xl font-mono leading-normal mt-4 border-l-4 border-primary pl-4">
+                            &gt; Cybersecurity Analyst &amp; Full-Stack Developer
+                        </h2>
+<p class="text-gray-400 text-base max-w-[500px] mt-4 leading-relaxed">
+                            Bridging the gap between offensive security and robust software architecture. Specialized in penetration testing, threat modeling, and secure code implementation.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="group flex min-w-[160px] cursor-pointer items-center justify-center rounded h-14 px-6 bg-primary text-background-dark text-base font-bold tracking-wider transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(0,221,255,0.2)]" href="#projects">
+<span>VIEW PROJECTS</span>
+<span class="material-symbols-outlined ml-2">terminal</span>
+</a>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded border border-border-dark bg-transparent hover:bg-white/5 text-white h-14 px-6 text-base font-bold transition-all">
+<span>DOWNLOAD CV</span>
+</button>
+</div>
+</div>
+<div class="hidden lg:flex justify-center">
+<div class="w-full max-w-[450px] aspect-square rounded-xl border border-border-dark bg-surface-dark/50 backdrop-blur-sm p-6 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<div class="flex gap-1.5 mb-6">
+<div class="size-2.5 rounded-full bg-red-500/50"></div>
+<div class="size-2.5 rounded-full bg-yellow-500/50"></div>
+<div class="size-2.5 rounded-full bg-green-500/50"></div>
+</div>
+<div class="font-mono text-sm space-y-2 text-gray-400">
+<p class="text-primary">$ whoami</p>
+<p>alex_cipher</p>
+<p class="text-primary">$ fetch --skills</p>
+<p class="text-white">● Penetration Testing [85%]</p>
+<p class="text-white">● React / Next.js [90%]</p>
+<p class="text-white">● Python / Go [82%]</p>
+<p class="text-white">● Cloud Security [78%]</p>
+<p class="text-primary">$ scan --target network</p>
+<p class="animate-pulse">_</p>
+</div>
+<div class="absolute bottom-4 right-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">shield_person</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40 bg-surface-dark/20" id="about">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/3 aspect-square relative group">
+<div class="absolute inset-0 border-2 border-primary/30 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+<div class="relative h-full w-full bg-surface-dark border border-border-dark flex items-center justify-center overflow-hidden">
+<img alt="Cybersecurity Lab" class="object-cover h-full w-full grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-P7Hlz5RpakKoozCavqwHQOY0gITDk0tsist-I6wmjm9HikIgkJqtf3bTCmfkERZ-7XZUsjOYIFBkY8tWN9Ax1lFOfbIJOsdJCy1e0HuZAEKarMWX3M5yAhVadkEFtKPRJb1ErmEKUFY6_zkESY-wiTtkGpnS82ZYuPpki5SkVF-gE-E5uqR7hq6Isv9DtEAtUiI0AkeheGZCONWzflRP4R4L3nydKE66Y6RdNGwp3e6Y0Qs8siEXtXGIJQp_-DYN2hTBSmF_1A"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+<div class="flex-1 space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="text-primary font-mono text-sm tracking-[0.3em] uppercase">About The Analyst</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold">Decoding the Digital Frontier.</h2>
+<p class="text-gray-400 leading-relaxed text-lg">
+                            I am a Cybersecurity enthusiast and Full-Stack Developer dedicated to building secure digital ecosystems. My journey began in the world of competitive CTFs, which instilled in me an "attacker's mindset"—an essential perspective for building truly resilient software. 
+                        </p>
+<p class="text-gray-400 leading-relaxed">
+                            Currently pursuing specialized certifications in ethical hacking, I balance my time between discovering vulnerabilities and crafting high-performance web applications using modern stacks like Next.js, FastAPI, and Kubernetes.
+                        </p>
+<div class="grid grid-cols-2 gap-4 py-4">
+<div class="border-l-2 border-primary pl-4">
+<p class="text-2xl font-bold">20+</p>
+<p class="text-xs text-gray-500 uppercase font-mono tracking-widest">Active Clients</p>
+</div>
+<div class="border-l-2 border-primary pl-4">
+<p class="text-2xl font-bold">15+</p>
+<p class="text-xs text-gray-500 uppercase font-mono tracking-widest">Global Awards</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40" id="skills">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-4">Arsenal &amp; Validation</h2>
+<h3 class="text-4xl md:text-5xl font-bold">Tech Stack &amp; Certs</h3>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">terminal</span></div>
+<p class="font-bold">Python</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">javascript</span></div>
+<p class="font-bold">Node.js</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">database</span></div>
+<p class="font-bold">PostgreSQL</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">cloud</span></div>
+<p class="font-bold">AWS/GCP</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">view_quilt</span></div>
+<p class="font-bold">React</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">storage</span></div>
+<p class="font-bold">Redis</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">settings_ethernet</span></div>
+<p class="font-bold">Kubernetes</p>
+</div>
+<div class="bg-surface-dark/40 border border-border-dark p-6 rounded custom-glow text-center">
+<div class="text-primary mb-3"><span class="material-symbols-outlined text-4xl">shield</span></div>
+<p class="font-bold">Nmap</p>
+</div>
+</div>
+<div class="bg-surface-dark/60 border border-primary/20 p-8 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl">verified_user</span>
+</div>
+<h4 class="text-xl font-bold mb-6 text-primary">Certifications</h4>
+<ul class="space-y-4 font-mono text-sm">
+<li class="flex items-start gap-3">
+<span class="text-primary mt-1">▶</span>
+<span>CompTIA Security+ SY0-601</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary mt-1">▶</span>
+<span>eLearnSecurity Junior Penetration Tester (eJPT)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary mt-1">▶</span>
+<span>AWS Certified Security - Specialty</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary mt-1">▶</span>
+<span>Certified Ethical Hacker (CEH) - v12</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40 bg-surface-dark/10" id="projects">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="space-y-4">
+<div class="h-1 w-20 bg-primary"></div>
+<h2 class="text-4xl md:text-5xl font-bold">Selected Operations</h2>
+</div>
+<p class="text-gray-400 max-w-md">
+                        A showcase of security tools, full-stack applications, and research projects involving threat detection.
+                    </p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="group relative bg-surface-dark border border-border-dark overflow-hidden rounded-lg">
+<div class="aspect-video w-full bg-black/50 overflow-hidden">
+<img alt="NetGuard" class="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbeRWgac3Rjt_kcDvXH8TPiFTWgKu_OluXowEzWOGdfSYtPYDc_7PUVm4b2BpiWe3JL3meAhVFBARGr5fYp_Up0_m0JIfjDN7K6ctyLxQd6BjDDoZtmosxW1PSf4l49YgGJVqiZU3_eIKoTKrNpgN2Lkgf5OXyQb8A8uIlx0p42uZEm7Zdw4R-I9M8nF9JiRu-90gohZeS8yyDF1o6UkVdvsK58j441bGs2ACtBZJeVn5uFDe0pve9j0OSTJe980lpsr-32EAK9w"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">NetGuard AI</h3>
+<div class="flex gap-2">
+<span class="text-xs font-mono px-2 py-1 bg-primary/10 text-primary border border-primary/20">PYTHON</span>
+<span class="text-xs font-mono px-2 py-1 bg-primary/10 text-primary border border-primary/20">ML</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Real-time intrusion detection system using neural networks to identify anomalous traffic patterns and zero-day threats.</p>
+<a class="inline-flex items-center text-sm font-bold tracking-widest text-primary gap-2 group-hover:translate-x-2 transition-transform uppercase" href="#">
+                                Analysis Report <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="group relative bg-surface-dark border border-border-dark overflow-hidden rounded-lg">
+<div class="aspect-video w-full bg-black/50 overflow-hidden">
+<img alt="CipherAuth" class="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFEvDXIlDjiQR6QapykhkfomUAPmWnIUGJ0IqPlhZOBOHcdA6DUteYNSUoRACRTGKKG2Lxu5dMyAuTKes3UQcP06gTIJFtx-n-qIIF-43goNcpMmw5ZoHIZlC7J-9YFLo8BpLewkmcp5pn0qUr-sMWh1NLLb5AFVYTg2eQrpNePjrM1gtxB_aooQpZTXA0FmX_bM9zIxyy2YrjCqJDbGp9F0B9PbQz1EE4TD2-xaccgy9AC3Pd8I7wxrL9cH6e8M2CeFJbwNhMIg"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">CipherAuth SDK</h3>
+<div class="flex gap-2">
+<span class="text-xs font-mono px-2 py-1 bg-primary/10 text-primary border border-primary/20">GOLANG</span>
+<span class="text-xs font-mono px-2 py-1 bg-primary/10 text-primary border border-primary/20">WEB3</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Zero-knowledge proof authentication framework for decentralized applications, ensuring user privacy without compromising security.</p>
+<a class="inline-flex items-center text-sm font-bold tracking-widest text-primary gap-2 group-hover:translate-x-2 transition-transform uppercase" href="#">
+                                View Repository <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40" id="experience">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-4">Timeline</h2>
+<h3 class="text-4xl md:text-5xl font-bold">Mission History</h3>
+</div>
+<div class="relative space-y-12 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border-dark before:to-transparent">
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+<span class="material-symbols-outlined text-sm">history_edu</span>
+</div>
+<div class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded bg-surface-dark border border-border-dark custom-glow">
+<div class="flex items-center justify-between mb-2">
+<time class="font-mono text-primary text-xs">2022 - PRESENT</time>
+</div>
+<div class="text-white font-bold text-xl mb-1">Lead Security Researcher</div>
+<div class="text-gray-500 text-sm mb-4">CyberSentinel Labs</div>
+<p class="text-gray-400 text-sm">Leading vulnerability assessments for fintech clients and developing internal automated pentesting tools.</p>
+</div>
+</div>
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+<span class="material-symbols-outlined text-sm">code</span>
+</div>
+<div class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded bg-surface-dark border border-border-dark custom-glow">
+<div class="flex items-center justify-between mb-2">
+<time class="font-mono text-primary text-xs">2021 - 2022</time>
+</div>
+<div class="text-white font-bold text-xl mb-1">Full-Stack Developer</div>
+<div class="text-gray-500 text-sm mb-4">Nexus Digital Systems</div>
+<p class="text-gray-400 text-sm">Architected and deployed high-availability API services for an e-commerce platform processing 10k+ daily transactions.</p>
+</div>
+</div>
+<div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+<div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background-dark text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+<span class="material-symbols-outlined text-sm">security</span>
+</div>
+<div class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded bg-surface-dark border border-border-dark custom-glow">
+<div class="flex items-center justify-between mb-2">
+<time class="font-mono text-primary text-xs">2019 - 2021</time>
+</div>
+<div class="text-white font-bold text-xl mb-1">Junior SOC Analyst</div>
+<div class="text-gray-500 text-sm mb-4">DefenseOne MSSP</div>
+<p class="text-gray-400 text-sm">Monitored SIEM logs for Fortune 500 clients, responding to security incidents and drafting technical post-mortems.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40 bg-surface-dark/20" id="blog">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
+<div>
+<h2 class="text-primary font-mono text-sm tracking-[0.3em] uppercase mb-2">Intel Stream</h2>
+<h3 class="text-4xl font-bold">Latest Writeups</h3>
+</div>
+<a class="px-6 py-3 border border-border-dark hover:border-primary text-sm font-bold uppercase transition-all" href="#">Explore Archives</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="group">
+<div class="aspect-video mb-6 overflow-hidden rounded border border-border-dark">
+<img alt="Article Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9X0QdSn8F1d_9DYcjkDzDln8FGV7ccd6Spxzy_DSWeVUE-Y138xOfCy8gBPauaYQn71fLZUjpv7y-rJu07wCipvh5cOzU4DfYVdkP2fJrZrdztxIoXi7duZXtWLO6MSfc1KPeLbOBz_BudNvSOiykqhQcOb3vTYbA9yXPbEjrV0KLWhCGWqrOvVOb9dvOXGMiFhRbPAlWFDXjeLh2WkWLsSEUT3zlawz19cYaEM-FD6gvSNSqeZtwWLhQh7o_UnRZYCmWgTTAVQ"/>
+</div>
+<time class="font-mono text-primary text-xs mb-2 block uppercase tracking-widest">Oct 24, 2023</time>
+<h4 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">The Anatomy of a Supply Chain Attack: A Deep Dive</h4>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">Analyzing recent high-profile breaches and how developers can protect their CI/CD pipelines from similar threats.</p>
+<a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-primary" href="#">Read Post <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</article>
+<article class="group">
+<div class="aspect-video mb-6 overflow-hidden rounded border border-border-dark">
+<img alt="Article Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOf8nIlaTosiUKO6Jz8t-4tj3c-qoJaq_o_qCk5jgnbakkngP2NH-5zn7LZjGMJ3NisfGEVRROwRVQUiXwIa_hqZKSeyd1PhM19fQNDubh_8uOu5nOQh95rjNq9VmFnBQdmtPwaDofP5g40bF9-bKRSw9h22wyc4qh4qAso5PJwblAv-M1ncmtQiDpNiulj8pRWkRsKGz5xjiSOWHkYq6byYxVL_lQg29_482zTbfinwgciqcMdEAiDcAv0ijlCm8stBZOliaiaA"/>
+</div>
+<time class="font-mono text-primary text-xs mb-2 block uppercase tracking-widest">Sep 12, 2023</time>
+<h4 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">Rust for Backend: Security Benefits &amp; Performance</h4>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">Why Rust is becoming the gold standard for secure, memory-safe backend architecture in 2024.</p>
+<a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-primary" href="#">Read Post <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</article>
+<article class="group">
+<div class="aspect-video mb-6 overflow-hidden rounded border border-border-dark">
+<img alt="Article Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoxgpzVlPvRaFr7hx2oRlHLQ865rhDF_qBsyhOE7tRCJFa8RGfVt4cb0ykyma4TV-2RzGt0qDNIfHcyZLAaV8Ie7i9RKJGDK-iI_fDnYcf0jTvw2zevUtgq-1xuL0M83vEKMJeEuhOcx9sS1I-LSA2pFcEt8MZqj7xMDcKnCkomnKl3UFSkic1tpLtk32sh0LV7j_mRJ187h528Y7pcbdtAwdUaqAwMEda1-a71NpS9aSXTTlQtHAOlPYKzSC7qyNCvBQlBe6z4g"/>
+</div>
+<time class="font-mono text-primary text-xs mb-2 block uppercase tracking-widest">Aug 05, 2023</time>
+<h4 class="text-xl font-bold mb-4 group-hover:text-primary transition-colors">Kubernetes Hardening: 10 Essential Practices</h4>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">A practical guide to securing your container orchestration from the ground up, including RBAC and Network Policies.</p>
+<a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-primary" href="#">Read Post <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</article>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 md:px-20 lg:px-40" id="contact">
+<div class="max-w-[1200px] mx-auto bg-surface-dark border border-border-dark rounded-2xl overflow-hidden relative">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="grid lg:grid-cols-2">
+<div class="p-12 lg:p-16 space-y-8">
+<div>
+<h2 class="text-4xl font-bold mb-4">Initiate Contact</h2>
+<p class="text-gray-400">Looking for a penetration test, a secure web application, or a technical consultation? Send an encrypted signal.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div>
+<p class="text-xs font-mono text-gray-500 uppercase tracking-widest">Email</p>
+<p class="text-lg font-bold">cipher@secure-node.io</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-background-dark transition-all">
+<span class="material-symbols-outlined">encrypted</span>
+</div>
+<div>
+<p class="text-xs font-mono text-gray-500 uppercase tracking-widest">PGP Key</p>
+<p class="text-lg font-bold">0x7F4A...B8C2</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-4">
+<a class="w-10 h-10 border border-border-dark flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="w-10 h-10 border border-border-dark flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+<div class="p-12 lg:p-16 bg-background-dark/30 border-l border-border-dark">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-mono text-gray-500 uppercase tracking-widest">Codename / Name</label>
+<input class="w-full bg-background-dark border border-border-dark p-4 focus:border-primary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-mono text-gray-500 uppercase tracking-widest">Signal Source / Email</label>
+<input class="w-full bg-background-dark border border-border-dark p-4 focus:border-primary outline-none transition-all" placeholder="john@domain.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-mono text-gray-500 uppercase tracking-widest">Encrypted Message / Message</label>
+<textarea class="w-full bg-background-dark border border-border-dark p-4 focus:border-primary outline-none transition-all h-32" placeholder="Transmission content..."></textarea>
+</div>
+<button class="w-full h-14 bg-primary text-background-dark font-bold tracking-[0.2em] uppercase hover:shadow-[0_0_20px_rgba(0,221,255,0.4)] transition-all" type="submit">Send Transmission</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-border-dark/30">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-6">
+<div class="flex items-center gap-3 text-primary/70 font-mono text-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<p class="uppercase tracking-[0.2em]">System Active: Secure connection established.</p>
+</div>
+<p class="text-gray-500 text-xs font-mono uppercase tracking-widest">© 2024 ALEX CIPHER. STACK: NEXTJS, TAILWIND, GOLANG.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
